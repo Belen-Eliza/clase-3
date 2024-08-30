@@ -6,7 +6,7 @@ import { Text, View } from 'react-native';
 
 
 export default function Index() {
-  
+  const palabra: string = "hola";
   return (
     <View style={{justifyContent: "space-around",
     alignItems: "center", 
@@ -18,33 +18,33 @@ export default function Index() {
     marginTop: "40%",
     minHeight: 80
     }}>
-      <Letra letra="A"/>  
-       <Letra letra="B"/> 
-       <Letra letra="C"/> 
-       <Letra letra="D"/> 
-       <Letra letra="E"/>
-      <Letra letra="F"/>  
-      <Letra letra="G"/> 
-      <Letra letra="H"/> 
-      <Letra letra="I"/> 
-      <Letra letra="J"/>
-      <Letra letra="K"/>  
-      <Letra letra="L"/> 
-      <Letra letra="M"/> 
-      <Letra letra="N"/> 
-      <Letra letra="Ñ"/>
-      <Letra letra="O"/>  
-      <Letra letra="P"/> 
-      <Letra letra="Q"/> 
-      <Letra letra="R"/> 
-      <Letra letra="S"/>
-      <Letra letra="T"/>  
-      <Letra letra="U"/> 
-      <Letra letra="V"/> 
-      <Letra letra="W"/>
-       <Letra letra="X"/>
-      <Letra letra="Y"/>  
-      <Letra letra="Z"/>
+      <Letra letra="A" palabra={palabra}/>  
+       <Letra letra="B" palabra={palabra}/> 
+       <Letra letra="C" palabra={palabra}/> 
+       <Letra letra="D" palabra={palabra}/> 
+       <Letra letra="E" palabra={palabra}/>
+      <Letra letra="F" palabra={palabra}/>  
+      <Letra letra="G" palabra={palabra}/> 
+      <Letra letra="H" palabra={palabra}/> 
+      <Letra letra="I" palabra={palabra}/> 
+      <Letra letra="J" palabra={palabra}/>
+      <Letra letra="K" palabra={palabra}/>  
+      <Letra letra="L" palabra={palabra}/> 
+      <Letra letra="M" palabra={palabra}/> 
+      <Letra letra="N" palabra={palabra}/> 
+      <Letra letra="Ñ" palabra={palabra}/>
+      <Letra letra="O" palabra={palabra}/>  
+      <Letra letra="P" palabra={palabra}/> 
+      <Letra letra="Q" palabra={palabra}/> 
+      <Letra letra="R" palabra={palabra}/> 
+      <Letra letra="S" palabra={palabra}/>
+      <Letra letra="T" palabra={palabra}/>  
+      <Letra letra="U" palabra={palabra}/> 
+      <Letra letra="V" palabra={palabra}/> 
+      <Letra letra="W" palabra={palabra}/>
+       <Letra letra="X" palabra={palabra}/>
+      <Letra letra="Y" palabra={palabra}/>  
+      <Letra letra="Z" palabra={palabra}/>
 
     </View>
   )

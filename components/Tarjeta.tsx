@@ -2,13 +2,13 @@ import { useState } from "react";
 import { View, Pressable, Text, StyleSheet } from "react-native";
 
 function Tarjeta(props: { texto: string }){
-    const [colores,setColores] = useState({bckgr: "#9fc7c5", font: "black",tipo: 1});
+    const [colores,setColores] = useState({tipo: 1});
     const estilos = StyleSheet.create({
         tarjeta: {justifyContent: "center",
             alignItems: "center", 
             alignContent: "center", 
             flex: 1,
-            backgroundColor: colores.bckgr,
+            backgroundColor: colores.tipo==1 ? "#9fc7c5": "#486867",
             width: "80%",
             margin: 20},
         boton: {
@@ -17,23 +17,16 @@ function Tarjeta(props: { texto: string }){
         },
         texto:{
             fontSize: 20,
-            color: colores.font
+            color: colores.tipo==1 ? "black": "white",
         },
-        color1:{
-            backgroundColor: "#9fc7c5", 
-            color: "black"
-        },
-        color2: {
-            backgroundColor: "#486867", 
-            color: "white"
-        }
+        
     });
     const cambiarColor = () => {
         setColores(prev => {
             if (prev.tipo==1){
-                return {bckgr: "#486867", font: "white",tipo: 2}
+                return {tipo: 2}
             }
-            return {bckgr: "#9fc7c5", font: "black",tipo: 1}
+            return {tipo: 1}
         })
     }
     return(

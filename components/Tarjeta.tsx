@@ -26,7 +26,7 @@ function Tarjeta(props: { texto: string }){
             if (prev=="claro"){
                 return "oscuro"
             }
-            return "oscuro"
+            return "claro"
         })
     }
     return(

@@ -10,7 +10,7 @@ var estadoLetraCorrecta={
     color: "white"
 }
 var estadoLetraIncorrecta={
-    bckgr: "#892106",
+    bckgr: "#b10d24",
     color: "white"
 }
 
@@ -25,8 +25,8 @@ function Letra(props:{letra: string, palabra: string}) {
             padding: 5,
             paddingHorizontal: 4,
             margin: 7,
-            minWidth: 50
-        },
+            minWidth: 50,
+            },
         boton: {
             alignItems: "center", 
             alignContent: "center", 
@@ -44,6 +44,7 @@ function Letra(props:{letra: string, palabra: string}) {
         if (p.includes(l)) {
             cambiarEstado(()=>estadoLetraCorrecta);
             alert("La palabra incluye la "+ props.letra );
+            //descubiertas.push(l);
         } else{
             alert("La palabra no incluye la "+ props.letra);
             cambiarEstado(()=>estadoLetraIncorrecta);
@@ -60,3 +61,6 @@ function Letra(props:{letra: string, palabra: string}) {
     )
 }
 export default Letra;
+var estadoEncontrado= {
+    display: "block"
+  }

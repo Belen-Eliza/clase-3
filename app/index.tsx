@@ -1,4 +1,3 @@
-import Contador from "@/components/contador";
 import Tarjeta from "@/components/Tarjeta";
 import { StatusBar } from 'expo-status-bar';
 import { Text, View } from 'react-native';

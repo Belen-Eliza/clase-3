@@ -10,10 +10,13 @@ function Tarjeta(props: { texto: string }){
             flex: 1,
             backgroundColor: tema=="claro" ? "#9fc7c5": "#486867",
             width: "80%",
-            margin: 20},
+            margin: 20
+           },
         boton: {
             alignItems: "center", 
             alignContent: "center", 
+            width: "100%",
+            
         },
         texto:{
             fontSize: 20,

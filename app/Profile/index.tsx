@@ -4,7 +4,7 @@ import { Text, View, StyleSheet } from 'react-native';
 import { useState } from "react";
 
 export default function Perfil() {
-
+  const [nombre,setNombre]=useState("James Bond");
   const estilos = StyleSheet.create({
     view: {justifyContent: "center",
         alignItems: "center", 
@@ -23,8 +23,9 @@ export default function Perfil() {
   })
   return (
     <View style={[estilos.view,estilos.margen]}>
-        <Text style={[estilos.texto,estilos.margen]}>Nombre Apellido</Text>
-        <Link href={"/"} ><ThemedButton texto="Cambiar nombre" /></Link>
+        <Text style={[estilos.texto,estilos.margen]}>{nombre}</Text>
+        {/* <Link href={"/Profile/modal"} asChild ><ThemedButton texto="Cambiar nombre" /></Link> */}
+        <Link href={"/Profile/modal"}><Text>Cambiar nombre</Text></Link>
       
     </View>
   )

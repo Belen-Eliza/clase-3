@@ -15,9 +15,8 @@
         {/* Optionally configure static options outside the route.*/}
         <Tabs.Screen name="index" options={{title:"Home"}} />
         <Tabs.Screen name="contador" options={{title:"Contador"}} />
-        <Tabs.Screen name="Profile/index" options={{title:"Perfil"}} />
-        <Tabs.Screen name="Profile/modal" options={{href: null}} />
-
+        <Tabs.Screen name="Profile" options={{title:"Perfil"}} />
+       
       </Tabs>
    
     );

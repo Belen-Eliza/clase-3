@@ -1,11 +1,11 @@
-  import { Stack, Tabs } from 'expo-router';
+  import { Tabs } from 'expo-router';
 
   export default function Layout() {
     return (
       <Tabs
         screenOptions={{
           headerStyle: {
-            backgroundColor: '#8080ff',
+            backgroundColor: '#7bd5ff',
           },
           headerTintColor: 'black',
           headerTitleStyle: {

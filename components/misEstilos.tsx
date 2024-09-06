@@ -41,21 +41,17 @@ const estilos= StyleSheet.create({
         flex: 1,
         
     },
-    boton: {
-        padding: 10,
-        borderWidth: 2,
-        borderRadius: 6,
-        borderColor: "blue",
-        backgroundColor: "lightblue",
-        height: "90%",
-        width: "100%",
-        flexDirection: "row"
-    },
+    
     label_boton: {
         fontSize: 20,
         fontWeight: "600",
-        alignSelf: "center",
-        
+        alignSelf: "center",        
+    },
+    label_tarjeta:{
+        fontSize: 20,
+        fontWeight: "600",
+        alignSelf: "center", 
+        paddingTop:22
     },
     margen: {
         margin: "10%"

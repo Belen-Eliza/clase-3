@@ -3,7 +3,7 @@ import { View, Pressable, Text, StyleSheet } from "react-native";
 
 function Tarjeta(props: { texto: string }){
     const [tema,setTema] = useState("claro");
-    const estilos = StyleSheet.create({
+    const estilos1 = StyleSheet.create({
         tarjeta: {justifyContent: "center",
             alignItems: "center", 
             alignContent: "center", 
@@ -33,9 +33,9 @@ function Tarjeta(props: { texto: string }){
         })
     }
     return(
-        <View style={estilos.tarjeta}>
-            <Pressable style={estilos.boton} onPress={cambiarColor}>
-                <Text style={estilos.texto}>{props.texto}</Text>
+        <View style={estilos1.tarjeta}>
+            <Pressable style={estilos1.boton} onPress={cambiarColor}>
+                <Text style={estilos1.texto}>{props.texto}</Text>
             </Pressable>
         </View>
             

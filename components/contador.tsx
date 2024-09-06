@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { View, Text, Pressable, StyleSheet, Image } from "react-native";
-
+import estilos from "./misEstilos";
 export default function Contador(){
 
 const [contador,setContador] = useState(0);
@@ -17,59 +17,29 @@ const reducir = ()  => {
 }
 const image = require("@/assets/images/react-logo.png")
 
-return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text style={styles.title}>Contador: {contador}.</Text>
-      <Image source={image}></Image>
-      <View style={styles.buttonContainer}>
-      <Pressable onPress={incrementar} style={styles.button}> 
-        <Text style={styles.buttonLabel}>Sumar</Text> 
-      </Pressable>
-      </View>
-      <View style={styles.buttonContainer}>
-      <Pressable onPress={reducir} style={styles.button} > 
-        <Text style={styles.buttonLabel}>Restar</Text> 
-      </Pressable>
-      </View>
-      
-    </View>
-  );
-}
-
 const styles = StyleSheet.create({
-  button: {
-    padding: 10,
-    borderWidth: 2,
-    borderRadius: 6,
-    borderColor: "blue",
-    backgroundColor: "lightblue",
-    height: "90%",
-    width: "100%",
-    justifyContent: "center",
-    alignContent: "center",
-    flexDirection: "row"
-    
-    },
-    buttonLabel: {
-      fontSize: 20,
-      fontWeight: "600",
-      
-    },
      buttonContainer: {
       width: 320,
       height: 70,
       justifyContent: "center",
       alignContent: "center"
      },
-     title:{
-      fontSize: 30,
-      fontWeight: "bold",
-      padding: 20
-     }
-})
+}) 
+return (
+    <View style={estilos.centrado} >
+      <Text style={estilos.titulo}>Contador: {contador}.</Text>
+      <Image source={image}></Image>
+      <View style={[styles.buttonContainer, estilos.margen]}>
+      <Pressable onPress={incrementar} style={[estilos.centrado,estilos.tarjeta1]}> 
+        <Text style={estilos.label_boton}>Sumar</Text> 
+      </Pressable>
+      </View>
+      <View style={styles.buttonContainer}>
+      <Pressable onPress={reducir} style={[estilos.centrado,estilos.tarjeta1]} > 
+        <Text style={estilos.label_boton}>Restar</Text> 
+      </Pressable>
+      </View>
+      
+    </View>
+  );
+}

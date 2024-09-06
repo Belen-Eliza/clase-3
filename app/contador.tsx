@@ -1,17 +1,12 @@
 import Contador from "@/components/contador";
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+import estilos from "@/components/misEstilos";
 
 export default function Tab_contador() {
     return(
-        <View style={{justifyContent: "space-between",
-            alignItems: "center", 
-            alignContent: "center", 
-            flex: 1,
-            marginBottom: "40%",
-            marginTop: "40%"
-            }}>
-              <Contador/>
-            </View>
+      <View style={estilos.mainView2}>
+        <Contador/>
+      </View>
     )
     
 }

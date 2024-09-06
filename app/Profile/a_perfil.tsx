@@ -1,11 +1,10 @@
-import { Link, router, useLocalSearchParams } from "expo-router";
+import { Link, useLocalSearchParams } from "expo-router";
 import { Text, View, StyleSheet, Pressable } from 'react-native';
-import { useState } from "react";
+import estilos from "@/components/misEstilos";
 
 export default function Perfil() {
-  /* const [nombre,setNombre]=useState("James Bond"); */
   const params = useLocalSearchParams();
-  const estilos = StyleSheet.create({
+  /* const estilos = StyleSheet.create({
     view: {justifyContent: "center",
         alignItems: "center", 
         alignContent: "center", 
@@ -34,14 +33,14 @@ export default function Perfil() {
         color:  "black",
         alignSelf: "center"
       }
-  })
+  }) */
   return (
-    <View style={[estilos.view,estilos.margen]}>
-      <Text style={[estilos.texto,{fontSize:30,fontWeight: "bold"}]}>Nombre:</Text>
+    <View style={[estilos.centrado,estilos.mainView]}>
+      <Text style={estilos.titulo}>Nombre:</Text>
       <Text style={[estilos.texto,estilos.margen]}>{params.nombre}</Text>
-      <Link href="/Profile/modal" asChild>
-        <Pressable style={estilos.tarjeta}>
-          <Text style={estilos.texto}>Cambiar nombre</Text>
+      <Link href="/Profile/modal" asChild >
+        <Pressable style={estilos.tarjeta1}>
+          <Text style={[estilos.label_boton,{paddingTop: 22}]}>Cambiar nombre</Text>
         </Pressable>
       </Link>
       

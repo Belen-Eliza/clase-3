@@ -1,18 +1,11 @@
 import Tarjeta from "@/components/Tarjeta";
-import { StatusBar } from 'expo-status-bar';
-import { Text, View } from 'react-native';
-
+import { View } from 'react-native';
+import estilos from "@/components/misEstilos";
 
 export default function Index() {
   
   return (
-    <View style={{justifyContent: "space-between",
-    alignItems: "center", 
-    alignContent: "center", 
-    flex: 1,
-    marginBottom: "40%",
-    marginTop: "40%"
-    }}>
+    <View style={estilos.mainView2}>
       <Tarjeta texto="Hola"/>
       <Tarjeta texto="Mundo"/>
       <Tarjeta texto="!"/>

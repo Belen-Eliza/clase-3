@@ -2,13 +2,13 @@ import { useState } from "react";
 import { View, Pressable, Text, StyleSheet } from "react-native";
 
 function Tarjeta(props: { texto: string }){
-    const [tema,setTema] = useState("claro");
-    const estilos = StyleSheet.create({
+    const [isPressed,change] = useState(false);
+    const estilos1 = StyleSheet.create({
         tarjeta: {justifyContent: "center",
             alignItems: "center", 
             alignContent: "center", 
             flex: 1,
-            backgroundColor: tema=="claro" ? "#9fc7c5": "#486867",
+            backgroundColor: isPressed ? "#486867": "#9fc7c5",
             width: "80%",
             margin: 20
            },
@@ -20,22 +20,19 @@ function Tarjeta(props: { texto: string }){
         },
         texto:{
             fontSize: 20,
-            color: tema=="claro" ? "black": "white"
+            color:  isPressed ? "white": "black"
         },
         
     });
     const cambiarColor = () => {
-        setTema(prev => {
-            if (prev=="claro"){
-                return "oscuro"
-            }
-            return "claro"
+        change(prev =>{
+            return !prev
         })
     }
     return(
-        <View style={estilos.tarjeta}>
-            <Pressable style={estilos.boton} onPress={cambiarColor}>
-                <Text style={estilos.texto}>{props.texto}</Text>
+        <View style={estilos1.tarjeta}>
+            <Pressable style={estilos1.boton} onPress={cambiarColor}>
+                <Text style={estilos1.texto}>{props.texto}</Text>
             </Pressable>
         </View>
             
